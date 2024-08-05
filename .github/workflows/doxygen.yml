@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install doxygen
-        run: apt-get install doxygen
+        run: sudo apt-get install -y doxygen
       - name: Build
       - run: doxygen
