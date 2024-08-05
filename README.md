@@ -2,15 +2,15 @@
 Logger is simple logger written in C
 
 ## Overview
-For set configuration see [here](#logger_set_config).
+For set configuration see [here](https://github.com/NetErrT/logger_documentation).
 
 ### Log functions:
-* [logger_trace](#logger_trace)
-* [logger_debug](#logger_debug)
-* [logger_info](#logger_info)
-* [logger_warn](#logger_warn)
-* [logger_error](#logger_error)
-* [logger_fatal](#logger_fatal)
+* logger_trace
+* logger_debug
+* logger_info
+* logger_warn
+* logger_error
+* logger_fatal
 
 ## Examples
 ### Hello World
