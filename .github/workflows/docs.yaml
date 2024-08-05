@@ -15,17 +15,17 @@ jobs:
         run: sudo apt-get install -y doxygen
       - name: Build documentation
         run: doxygen
-    deploy:
-      needs: build
-      permissions:
-        pages: write
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      runs-on: ubuntu-latest
-      steps:
-        - name: Deploy to github pages
-          uses: peaceiris/actions-gh-pages
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./docs
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to github pages
+        uses: peaceiris/actions-gh-pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
