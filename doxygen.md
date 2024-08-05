@@ -1,8 +1,15 @@
-# Logger
-Logger is simple logger written in C
+# Documentation for logger
 
 ## Overview
-For documentation see [here](https://neterrot.github.io/logger).
+For set configuration see [here](#logger_set_config).
+
+### Log functions:
+* [logger_trace](#logger_trace)
+* [logger_debug](#logger_debug)
+* [logger_info](#logger_info)
+* [logger_warn](#logger_warn)
+* [logger_error](#logger_error)
+* [logger_fatal](#logger_fatal)
 
 ## Examples
 ### Hello World

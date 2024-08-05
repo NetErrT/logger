@@ -7,3 +7,6 @@ liblogger.a
 
 # IDE files
 compile_commands.json
+
+# Documentation
+docs
