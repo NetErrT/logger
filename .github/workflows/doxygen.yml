@@ -7,4 +7,4 @@ jobs:
       - name: Install doxygen
         run: sudo apt-get install -y doxygen
       - name: Build
-      - run: doxygen
+        run: doxygen
