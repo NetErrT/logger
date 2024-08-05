@@ -35,6 +35,6 @@ main(void) {
 }
 ```
 #### output:
-<code>
-<span style="color:#a3be8c">$</span> <span style="color:#88c0d0">info 2024.08.05 14.10.01.262 main.c:14: Hello World!</span>
-</code>
+    <code>
+        $ info 2024.08.05 14.10.01.262 main.c:14: Hello World!
+    </code>
