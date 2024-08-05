@@ -1,15 +1,15 @@
 # Documentation for logger
 
 ## Overview
-For set configuration see [here](#logger_set_config).
+For set configuration see [here](@ref logger_set_config).
 
 ### Log functions:
-* [logger_trace](#logger_trace)
-* [logger_debug](#logger_debug)
-* [logger_info](#logger_info)
-* [logger_warn](#logger_warn)
-* [logger_error](#logger_error)
-* [logger_fatal](#logger_fatal)
+* [logger_trace](@ref logger_trace)
+* [logger_debug](@ref logger_debug)
+* [logger_info](@ref logger_info)
+* [logger_warn](@ref logger_warn)
+* [logger_error](@ref logger_error)
+* [logger_fatal](@ref logger_fatal)
 
 ## Examples
 ### Hello World
