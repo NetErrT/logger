@@ -1,0 +1,18 @@
+---
+BasedOnStyle: LLVM
+ColumnLimit: 120
+
+IndentWidth: 4
+ContinuationIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+BracedInitializerIndentWidth: 4
+
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+
+AlwaysBreakAfterReturnType: AllDefinitions
+AlwaysBreakTemplateDeclarations: Yes
+
+IndentCaseLabels: true
+
+PointerAlignment: Left
