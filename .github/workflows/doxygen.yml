@@ -1,0 +1,11 @@
+---
+name: Build documentation
+on: [push]
+jobs:
+  Documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doxygen
+        run: apt-get install doxygen
+      - name: Build
+      - run: doxygen
