@@ -1,12 +1,9 @@
-# Libs
-liblogger.so
-liblogger.a
+*.so
+*.a
+*.o
 
-# Cache
 .*cache
 
-# IDE files
 compile_commands.json
 
-# Documentation
 docs
