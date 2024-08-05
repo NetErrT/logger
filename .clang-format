@@ -16,3 +16,14 @@ AlwaysBreakTemplateDeclarations: Yes
 IndentCaseLabels: true
 
 PointerAlignment: Left
+AlignTrailingComments: true
+AlignConsecutiveAssignments: None
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: true
+  AcrossComments: true
+AlignConsecutiveDeclarations: None

@@ -13,7 +13,7 @@
 #include <errno.h>
 #endif
 
-static logger_config_t g_config;
+static logger_config_t config;
 
 static const char*
 get_tag(logger_log_level_t log_level) {
@@ -96,7 +96,7 @@ get_date(char date[]) {
     localtime_r(&tm.tv_sec, &info);
 #endif
 
-    switch (g_config.date) {
+    switch (config.date) {
         case LOGGER_DATE_TIME_ONLY: get_time(date, 0, &info, tm.tv_nsec); break;
         case LOGGER_DATE_ONLY: get_date_only(date, 0, &info); break;
         case LOGGER_DATE_FULL: {
@@ -139,7 +139,7 @@ logger_print(logger_log_level_t log_level, const char* file_name, int file_line,
 
     FILE* stream = get_stream(log_level);
 
-    switch (g_config.coloring) {
+    switch (config.coloring) {
         case LOGGER_COLORING_FULL: {
             const char* color = get_color(log_level);
 
@@ -159,8 +159,8 @@ logger_print(logger_log_level_t log_level, const char* file_name, int file_line,
             break;
     }
 
-    if (g_config.log_file) {
-        fprintf(g_config.log_file, "%s%s %s:%d: %s\n", tag, date, file_name, file_line, message);
+    if (config.log_file) {
+        fprintf(config.log_file, "%s%s %s:%d: %s\n", tag, date, file_name, file_line, message);
     }
 }
 
@@ -188,19 +188,19 @@ logger_file_open(const char* path) {
 
     logger_file_close();
 
-    g_config.log_file = log_file;
+    config.log_file = log_file;
 }
 
 void
 logger_file_close(void) {
-    if (g_config.log_file == NULL)
+    if (config.log_file == NULL)
         return;
 
-    fclose(g_config.log_file);
-    g_config.log_file = NULL;
+    fclose(config.log_file);
+    config.log_file = NULL;
 }
 
 void
-logger_set_config(logger_config_t config) {
-    g_config = config;
+logger_set_config(logger_config_t passed_config) {
+    config = passed_config;
 }

@@ -11,16 +11,16 @@ extern "C" {
 #define LOGGER_VERSION_MAJOR 0
 #define LOGGER_VERSION_MINOR 1
 
-#define LOGGER_COLOR_RED "\x1B[31m"
-#define LOGGER_COLOR_GREEN "\x1B[32m"
-#define LOGGER_COLOR_YELLOW "\x1B[33m"
-#define LOGGER_COLOR_BLUE "\x1B[34m"
+#define LOGGER_COLOR_RED     "\x1B[31m"
+#define LOGGER_COLOR_GREEN   "\x1B[32m"
+#define LOGGER_COLOR_YELLOW  "\x1B[33m"
+#define LOGGER_COLOR_BLUE    "\x1B[34m"
 #define LOGGER_COLOR_MAGENTA "\x1B[35m"
-#define LOGGER_COLOR_CYAN "\x1B[36m"
-#define LOGGER_COLOR_RESET "\033[0m"
+#define LOGGER_COLOR_CYAN    "\x1B[36m"
+#define LOGGER_COLOR_RESET   "\033[0m"
 
 #define LOGGER_LIMIT_MESSAGE 256 /*!< limit max message size with zero symbol */
-#define LOGGER_LIMIT_DATE 32     /*!< limit max date size with zero symbol */
+#define LOGGER_LIMIT_DATE    32  /*!< limit max date size with zero symbol */
 
 typedef enum {
     LOGGER_LOG_TRACE = 0,
@@ -83,8 +83,8 @@ void logger_set_config(logger_config_t config);
 
 #define logger_trace(...) logger_print(LOGGER_LOG_TRACE, __FILE__, __LINE__, __VA_ARGS__);
 #define logger_debug(...) logger_print(LOGGER_LOG_DEBUG, __FILE__, __LINE__, __VA_ARGS__);
-#define logger_info(...) logger_print(LOGGER_LOG_INFO, __FILE__, __LINE__, __VA_ARGS__);
-#define logger_warn(...) logger_print(LOGGER_LOG_WARN, __FILE__, __LINE__, __VA_ARGS__);
+#define logger_info(...)  logger_print(LOGGER_LOG_INFO, __FILE__, __LINE__, __VA_ARGS__);
+#define logger_warn(...)  logger_print(LOGGER_LOG_WARN, __FILE__, __LINE__, __VA_ARGS__);
 #define logger_error(...) logger_print(LOGGER_LOG_ERROR, __FILE__, __LINE__, __VA_ARGS__);
 #define logger_fatal(...) logger_print(LOGGER_LOG_FATAL, __FILE__, __LINE__, __VA_ARGS__);
 
