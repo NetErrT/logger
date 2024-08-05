@@ -35,8 +35,4 @@ main(void) {
 }
 ```
 #### output:
-<p>
-<code>
 $ info 2024.08.05 14.10.01.262 main.c:14: Hello World!
-</code>
-</p>
