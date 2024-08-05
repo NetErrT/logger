@@ -2,7 +2,7 @@
 Logger is simple logger written in C
 
 ## Overview
-For documentation see [here](https://neterrot.github.io/logger).
+For documentation see [here](https://neterrt.github.io/logger).
 
 ## Examples
 ### Hello World
