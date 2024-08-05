@@ -1,0 +1,31 @@
+name: Build and deploy documentation
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install doxygen
+        run: sudo apt-get install -y doxygen
+      - name: Build documentation
+        run: doxygen
+    deploy:
+      needs: build
+      permissions:
+        pages: write
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy to github pages
+          uses: peaceiris/actions-gh-pages
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./docs
